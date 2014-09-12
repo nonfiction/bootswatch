@@ -21,7 +21,7 @@ module.exports = function (grunt) {
       amelia:{}, cerulean:{}, cosmo:{}, cyborg:{}, darkly:{},
       flatly:{}, journal:{}, lumen:{}, paper:{}, readable:{},
       sandstone:{}, simplex:{}, slate:{}, spacelab:{}, superhero:{},
-      united:{}, yeti:{}, custom:{}
+      united:{}, yeti:{}, custom:{}, wires: {}
     },
     clean: {
       build: {
@@ -80,7 +80,7 @@ module.exports = function (grunt) {
     var compress = compress == undefined ? true : compress;
 
     var isValidTheme = grunt.file.exists(theme, 'variables.less') && grunt.file.exists(theme, 'bootswatch.less');
- 
+
      // cancel the build (without failing) if this directory is not a valid theme
     if (!isValidTheme) {
       return;
